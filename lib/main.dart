@@ -1,7 +1,6 @@
-
 import 'package:flutter/material.dart';
 
-import 'views/onboarding_view.dart';
+import 'views/home_page.dart';
 
 void main() {
   runApp(const Cyberwise());
@@ -18,7 +17,7 @@ class Cyberwise extends StatelessWidget {
       theme: ThemeData(
         fontFamily: "Product Sans",
       ),
-      home: const HomePage(),
+      home: const HomePage(), //first page
     );
   }
 }

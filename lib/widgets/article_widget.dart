@@ -54,6 +54,7 @@ class ArticleWidget extends StatelessWidget {
                                 .copyWith(color: Colors.white),
                           ),
                           GestureDetector(
+                            //to make the text a click bottom to go to detalis view articles
                             onTap: () {
                               Navigator.push(context,
                                   MaterialPageRoute(builder: ((context) {

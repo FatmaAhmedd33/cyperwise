@@ -22,18 +22,18 @@ class HomeView extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SearchTextField(),
+              const SearchTextField(),//search Bar
               const SizedBox(height: 10),
-              const CategoriesListView(),
+              const CategoriesListView(),//the text under scearch bar
               const SizedBox(height: 60),
-              const CategoryCyperwaresListview(),
+              const CategoryCyperwaresListview(),//cards consist of types of attack
               const SizedBox(height: 18),
               Text(
                 "Articles",
                 style: TextStyles.font20Bold.copyWith(color: Colors.white),
               ),
               const SizedBox(height: 8),
-              const ArticleListView(),
+              const ArticleListView(),//articles how to avoid attack
             ]),
       ),
     );

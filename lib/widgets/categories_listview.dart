@@ -7,6 +7,7 @@ class CategoriesListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<String> categories = [
+      //the data appear under search bar
       "ALL",
       "Malware",
       "Phishing",
@@ -20,6 +21,7 @@ class CategoriesListView extends StatelessWidget {
     return SizedBox(
       height: 31,
       child: ListView.builder(
+          //the scroll widget
           scrollDirection: Axis.horizontal,
           itemCount: categories.length,
           itemBuilder: (context, index) {

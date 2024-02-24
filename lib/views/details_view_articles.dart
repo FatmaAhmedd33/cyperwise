@@ -4,24 +4,30 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class DetailsViewArticles extends StatelessWidget {
-  final DetailsModel d1;
+  final DetailsModel d1; //the data of DetailsViewArticles
 
   const DetailsViewArticles({super.key, required this.d1});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor: Colors.black,
-        leading: IconButton(icon: const Icon(Icons.arrow_back),color: Colors.white
-      ,onPressed: () => Navigator.push(context,
-                        MaterialPageRoute(builder: ((context) {
-                      return const HomeView();
-                    })))
-                     ,),),
+      appBar: AppBar(
+        backgroundColor: Colors.black,
+        //IconButton to can forwared to homeview
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          color: Colors.white,
+          onPressed: () =>
+              Navigator.push(context, MaterialPageRoute(builder: ((context) {
+            return const HomeView();
+          }))),
+        ),
+      ),
       backgroundColor: Colors.black,
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
+            //container of dark part appear
             width: double.infinity,
             height: 240,
             decoration: const BoxDecoration(
@@ -30,6 +36,7 @@ class DetailsViewArticles extends StatelessWidget {
                         'assets/images/pngs/background article.png'))),
           ),
           Container(
+            //consist of the data of article
             width: double.infinity,
             // margin: EdgeInsets.all(10),
             padding: const EdgeInsets.all(5),

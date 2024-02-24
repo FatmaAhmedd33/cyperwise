@@ -8,7 +8,7 @@ class CategoryCyperwaresListview extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const List<CategoryCyperWareModel> categories = [
+    const List<CategoryCyperWareModel> categories = [//list consist of the data that will appear in scrolling
       CategoryCyperWareModel(
           title: "Malware",
           description:
@@ -70,7 +70,7 @@ class CategoryCyperwaresListview extends StatelessWidget {
         backgroundColor: Color(0xff9FBB73),
       ),
     ];
-    final List<CardsModel> pageCardsList = [
+    final List<CardsModel> pageCardsList = [//list of card page
       const CardsModel(
           color: Color(0xffEC8F5E),
           title: 'Malware',
@@ -122,16 +122,16 @@ class CategoryCyperwaresListview extends StatelessWidget {
     ];
     return SizedBox(
       height: 236,
-      child: ListView.builder(
+      child: ListView.builder(//widget to scroll
           clipBehavior: Clip.none,
-          itemCount: categories.length,
-          scrollDirection: Axis.horizontal,
+          itemCount: categories.length,//to display the number of list
+          scrollDirection: Axis.horizontal,//to scroll horizantal
           itemBuilder: (context, index) {
             return Padding(
               padding: const EdgeInsets.only(right: 18.0),
-              child: CategoryCyperwaresListviewItem(
-                category: categories[index],
-                c1: pageCardsList[index],
+              child: CategoryCyperwaresListviewItem(//the source code of widget and required to pass two parameter
+                category: categories[index],//the data to display in home view
+                c1: pageCardsList[index],// the data that appear when you click on card for more datalis about the type you choose
               ),
             );
           }),

@@ -11,8 +11,8 @@ class CategoryCyperwaresListviewItem extends StatelessWidget {
     required this.category,
     required this.c1
   });
-  final CategoryCyperWareModel category;
-  final CardsModel c1;
+  final CategoryCyperWareModel category;//the data to display in home view
+  final CardsModel c1; // the data that appear when you click on card for more datalis about the type you choose
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -21,7 +21,7 @@ class CategoryCyperwaresListviewItem extends StatelessWidget {
       child: Stack(
         clipBehavior: Clip.none,
         children: [
-          // Background Container
+          // Background Container "card"
           Container(
             height: 236,
             width: 185,
@@ -54,7 +54,7 @@ class CategoryCyperwaresListviewItem extends StatelessWidget {
             ),
           ),
           // Circle Positioned
-          Positioned(
+          Positioned(//for the icon that appear above card
             bottom: 180, // Half the height of the circle (138.5 / 2)
             right: -20, // Half the width of the circle (138.5 / 2)
             child: Container(
@@ -73,7 +73,7 @@ class CategoryCyperwaresListviewItem extends StatelessWidget {
                 )),
           ),
           // Svg Positioned
-          Positioned(
+          Positioned(// the arrow under the card
             bottom: -20, // Half the height of the circle (39.5 / 2)
             left: 0, // Positioned at the left edge
             right: 0, // Positioned at the right edge
@@ -84,17 +84,17 @@ class CategoryCyperwaresListviewItem extends StatelessWidget {
                 shape: const CircleBorder(),
                 color: category.color,
               ),
-              child: GestureDetector(
+              child: GestureDetector( //to make arrow click and make action
                 onTap: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: ((context) {
-                    return  DetalisViewCards(
+                    return  DetalisViewCards(//the action go to more detalis about the type
                       c1: c1,
                     );
                   })));
                 },
                 child: Center(
-                  child: SvgPicture.asset("assets/images/svgs/Vector.svg"),
+                  child: SvgPicture.asset("assets/images/svgs/Vector.svg"),//the arrow image
                 ),
               ),
             ),

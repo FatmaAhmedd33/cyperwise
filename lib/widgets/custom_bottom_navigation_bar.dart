@@ -8,6 +8,7 @@ class CustomBottomNavigationBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //the nigator bar that appear in te end of page
     return BottomNavigationBar(
       type: BottomNavigationBarType.fixed,
       backgroundColor: const Color(0xff171717),
@@ -17,7 +18,7 @@ class CustomBottomNavigationBar extends StatelessWidget {
       onTap: (value) {},
       showSelectedLabels: false,
       showUnselectedLabels: false,
-      elevation: 0,
+      elevation: 0, //no shadow
       items: [
         BottomNavigationBarItem(
           icon: SvgPicture.asset(

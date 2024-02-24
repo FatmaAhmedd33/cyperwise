@@ -6,7 +6,7 @@ class SearchTextField extends StatelessWidget {
   const SearchTextField({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) {//to make the shape of searchBar
     return SizedBox(
       height: 48,
       child: TextField(

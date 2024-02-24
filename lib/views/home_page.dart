@@ -1,7 +1,7 @@
 import 'package:cyberwares_awareness/views/home_view.dart';
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatelessWidget {// the first page
   const HomePage({super.key});
 
   @override
@@ -14,7 +14,7 @@ class HomePage extends StatelessWidget {
             decoration: const BoxDecoration(
                 color: Colors.black,
                 image: DecorationImage(
-                  alignment: Alignment.bottomCenter,
+                  alignment: Alignment.bottomCenter,//make the photo in end of page
                     image: NetworkImage('https://www.shutterstock.com/image-vector/spy-agent-hacker-anonymous-white-600nw-1722014434.jpg'))),
             child:
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -32,8 +32,8 @@ class HomePage extends StatelessWidget {
               const SizedBox(
                 height: 50,
               ),
-              GestureDetector(
-                  child: Container(
+              GestureDetector(//to make a bottom click
+                  child: Container(// to make the shape of bottom
                       alignment: Alignment.centerLeft,
                       padding: const EdgeInsets.all(10),
                       height: 50,
@@ -50,10 +50,10 @@ class HomePage extends StatelessWidget {
                               fontWeight: FontWeight.bold),
                         ),
                       )),
-                  onTap: () {
+                  onTap: () {//to make the bottom go to the homeview page
                     Navigator.push(context,
                         MaterialPageRoute(builder: ((context) {
-                      return HomeView();
+                      return const HomeView();
                     })));
                   })
             ])));

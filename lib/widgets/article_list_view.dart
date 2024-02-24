@@ -7,6 +7,7 @@ class ArticleListView extends StatelessWidget {
   const ArticleListView({super.key});
 
   final List<ArticalModel> articalList = const [
+    //list of data that appear
     ArticalModel(
         tileView: 'Avoid Malware attacks',
         smallDescription:
@@ -48,6 +49,7 @@ class ArticleListView extends StatelessWidget {
         image: 'assets/images/svgs/article8.svg'),
   ];
   final List<DetailsModel> detalisList = const [
+    //list of detalis of article page
     DetailsModel(
         title: 'Avoid Malware attack',
         subTitle1: 'To prevent malware infections,',
@@ -110,12 +112,14 @@ class ArticleListView extends StatelessWidget {
     return SizedBox(
       height: 151,
       child: ListView.builder(
+          //the scroll widget
           scrollDirection: Axis.horizontal,
           itemCount: articalList.length,
           itemBuilder: (context, index) {
             return ArticleWidget(
-              a1: articalList[index],
-              d1: detalisList[index],
+              a1: articalList[index], //list of data appear in home view
+              d1: detalisList[
+                  index], //list of data appear in detalis view articles
             );
           }),
     );
